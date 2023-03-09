@@ -17,5 +17,16 @@ namespace StoreSpring2023HPCTechnical.Models
 
         public ICollection<Order> Orders { get; set; } = null!;
 
+        public override string? ToString()
+        {
+            string ret = $"""
+                First Name:     {FirstName}
+                Last Name:      {LastName}
+                Address:        {Address}
+                Phone:          {Phone}
+                Email:          {Email}
+                """;
+            return ret;
+        }
     }
 }

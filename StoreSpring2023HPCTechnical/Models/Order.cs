@@ -16,5 +16,9 @@ namespace StoreSpring2023HPCTechnical.Models
         public Customer Customer { get; set; } = null!;
         public ICollection<OrderDetail> OrderDetails { get; set; } = null!;
 
+        public override string? ToString()
+        {
+            return $"\nOrder Placed:\t\t{OrderPlaced}\nOrder Fulfilled:\t{OrderFulfilled}\n";
+        }
     }
 }

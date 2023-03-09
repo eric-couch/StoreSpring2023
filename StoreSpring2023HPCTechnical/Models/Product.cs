@@ -14,5 +14,9 @@ namespace StoreSpring2023HPCTechnical.Models
         public string Name { get; set; } = null!;
         [Column(TypeName = "decimal(6,2)")]
         public decimal Price { get; set; }
+        public override string? ToString()
+        {
+            return $"\nProduct Name:\t{Name}\nPrice:\t{Price}";
+        }
     }
 }

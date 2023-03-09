@@ -14,7 +14,11 @@ namespace StoreSpring2023HPCTechnical.Models
         public int OrderId { get; set; }
         
 
-        public Order Order { get; set; } = null!;
-        public Product Product { get; set; } = null!;
+        public Order Orders { get; set; } = null!;
+        public Product Products { get; set; } = null!;
+        public override string? ToString()
+        {
+            return $"\tQty:\t{Quantity}\n\tProduct Name:\t{Products.Name}\n\tPrice:\t{Products.Price}";
+        }
     }
 }
